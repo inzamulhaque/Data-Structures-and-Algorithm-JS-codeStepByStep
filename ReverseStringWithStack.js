@@ -6,13 +6,6 @@ const push = (newVal) => {
   currentSize++;
 };
 
-const pop = () => {
-  if (currentSize > 0) {
-    currentSize--;
-    data.length = currentSize;
-  }
-};
-
 const convertStringToArray = (str) => {
   const strArr = [];
 
@@ -29,8 +22,18 @@ const reverseArr = (str) => {
   }
 };
 
+const convertArrayToString = (arr) => {
+  let str = "";
+  for (let i = 0; i < arr.length; i++) {
+    str += arr[i];
+  }
+  return str;
+};
+
 let str = "Alif";
 str = convertStringToArray(str);
 reverseArr(str);
+const result = convertArrayToString(data);
 
 console.log(data);
+console.log(result);
