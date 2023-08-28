@@ -23,9 +23,14 @@ const convertStringToArray = (str) => {
   return strArr;
 };
 
-push(1);
-pop();
+const reverseArr = (str) => {
+  for (let i = str.length - 1; i >= 0; i--) {
+    push(str[i]);
+  }
+};
 
-console.log(convertStringToArray("Alif"));
+let str = "Alif";
+str = convertStringToArray(str);
+reverseArr(str);
 
 console.log(data);
